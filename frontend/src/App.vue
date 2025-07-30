@@ -1,6 +1,6 @@
 <template>
   <div id="app" :class="{ 'dark': isDarkMode }">
-    <div v-if="isAuthenticated" class="app-layout">
+    <div v-if="isAuthenticated && $route.meta.requiresAuth" class="app-layout">
       <!-- Navigation -->
       <nav class="sidebar">
         <div class="sidebar-header">
@@ -83,8 +83,8 @@
       </main>
     </div>
 
-    <!-- Pages d'authentification -->
-    <div v-else class="auth-layout">
+    <!-- Pages publiques et d'authentification -->
+    <div v-else>
       <router-view />
     </div>
 
