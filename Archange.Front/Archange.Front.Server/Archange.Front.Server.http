@@ -1,0 +1,6 @@
+@Archange.Front.Server_HostAddress = http://localhost:7500
+
+GET {{Archange.Front.Server_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
